@@ -7,6 +7,13 @@
     <title>お勤め先の入力</title>
 
     <script src="/assets/js/metrixir.client.js"></script>
+
+
+    <script>
+        $(function(){
+            $('select.dropdown').dropdown();
+        })();
+    </script>
 </head>
 <body>
 <div class="full height image" layout:fragment="content">
@@ -57,13 +64,22 @@
                                 <input type="radio" name="industryType" value="サービス" th:checked="${form.industryType}=='サービス'"/>その他サービス業
                                 <input type="radio" name="industryType" value="その他" th:checked="${form.industryType}=='その他'"/>その他・不明
                             </div>
-                            <div class="field" th:classappend="${form.hasErrors('capital')} ? 'error'">
+
+
+                            <select name="" class="dropdown"></select>
+
+                            select.dropdown
+
+                            <div class="dropdown" th:classappend="${form.hasErrors('capital')} ? 'error'">
                                 <label>資本金</label>
-                                <input type="radio" name="capital" th:field="*{form.capital}" value="999" th:checked="${form.capital}=='999'"/>１千万円未満
-                                <input type="radio" name="capital" th:field="${form.capital}" value="4999" th:checked="${form.capital}=='4999'"/>１千万円以上５千万円未満
-                                <input type="radio" name="capital" th:field="${form.capital}" value="29999" th:checked="${form.capital}=='29999'"/>５千万円以上３億円未満
-                                <input type="radio" name="capital" th:field="${form.capital}" value="30000" th:checked="${form.capital}=='30000'"/>３億円以上
-                                <input type="radio" name="capital" th:field="${form.capital}" value="0" th:checked="${form.capital}=='0'"/>その他
+                                <select name="capital">
+                                    <option th:field="*{form.capital}" value="999" th:checked="${form.capital}=='999'"/>１千万円未満
+                                    <option th:field="${form.capital}" value="4999" th:checked="${form.capital}=='4999'"/>１千万円以上５千万円未満
+                                    <option th:field="${form.capital}" value="29999" th:checked="${form.capital}=='29999'"/>５千万円以上３億円未満
+                                    <option th:field="${form.capital}" value="30000" th:checked="${form.capital}=='30000'"/>３億円以上
+                                    <option th:field="${form.capital}" value="0" th:checked="${form.capital}=='0'"/>その他
+                                </select>
+
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('companySize')} ? 'error'">
                                 <label>お勤め先の規模（従業員数）</label>
