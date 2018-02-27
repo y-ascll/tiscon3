@@ -26,18 +26,45 @@
 
                             <div class="ui horizontal divider">ご本人について</div>
 
-                            <div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
-                                <label>お名前（漢字）<font color="#DF013A">(必須)</font></label>
-                                <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
-                            </div>
-                            <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
-                                <label>お名前（カナ) <font color="#DF013A">(必須)</font></label>
-                                <input type="text" name="kanaName" th:value="${form.kanaName}"/>
-                            </div>
-                            <div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
-                                <label>お名前（ローマ字）<font color="#DF013A">(必須)</font></label>
-                                <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
-                            </div>
+                            <table>
+                                <tr>
+                                    <td><div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
+                                    <label>お名前（漢字 姓）<font color="#DF013A">(必須)</font></label>
+                                    <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
+                                    </div><td>
+                                    <td><div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
+                                    <label>お名前（漢字　名）<font color="#DF013A">(必須)</font></label>
+                                    <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
+                                    </div><td>
+                                <tr>
+                            <table>
+
+                            <table>
+                                <tr>
+                                    <td><div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
+                                    <label>お名前（カナ　セイ) <font color="#DF013A">(必須)</font></label>
+                                    <input type="text" name="kanaName" th:value="${form.kanaName}"/>
+                                    </div><td>
+                                    <td><div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
+                                    <label>お名前（カナ　メイ) <font color="#DF013A">(必須)</font></label>
+                                    <input type="text" name="kanaName" th:value="${form.kanaName}"/>
+                                    </div><td>
+                                <tr>
+                            <table>
+
+                            <table>
+                                <tr>
+                                    <td><div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
+                                    <label>お名前（ローマ字　Last name）<font color="#DF013A">(必須)</font></label>
+                                    <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
+                                    </div><td>
+                                    <td><div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
+                                    <label>お名前（ローマ字　First name）<font color="#DF013A">(必須)</font></label>
+                                    <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
+                                    </div><td>
+                                <tr>
+                            <table>
+
                             <div class="field" th:classappend="${form.hasErrors('gender')} ? 'error'">
                                 <label>性別 <font color="#DF013A">(必須)</font></label>
                                 <input type="radio" name="gender" value="male" th:checked="${form.gender}=='male'"/>男性
