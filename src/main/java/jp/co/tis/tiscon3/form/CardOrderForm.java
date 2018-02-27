@@ -73,7 +73,7 @@ public class CardOrderForm extends FormBase {
     private String job;
 
     @NotBlank
-    @Size(max = 6)
+    @Size(max = 11)
     @Pattern(regexp = "[0-9]*")
     private String income;
 
