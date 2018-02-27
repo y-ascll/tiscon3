@@ -53,7 +53,9 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('industryType')} ? 'error'">
                                 <label>業種</label>
+                                <!--/*  <select class="ui search dropdown" name="industryType"> */-->
                                 <select name="industryType">
+                                    <!--*/ <option />選択してください /*-->
                                     <option value="農林水鉱" th:selected="${form.industryType}=='農林水鉱'"/>農業・林業・水産業・鉱業
                                     <option value="建築不動産" th:selected="${form.industryType}=='建築不動産'"/>建設・不動産業
                                     <option value="製造" th:selected="${form.industryType}=='製造'"/>製造業
@@ -105,9 +107,14 @@
                             </div>
 
                             <!--/*"ご本人"の入力値を引き回すための隠し項目*/-->
+                            <!--/* 変数"---Name2"に対応済み */-->
+
                             <input type="hidden" name="kanjiName" th:value="${form.kanjiName}"/>
+                            <input type="hidden" name="kanjiName2" th:value="${form.kanjiName2}"/>
                             <input type="hidden" name="kanaName" th:value="${form.kanaName}"/>
+                            <input type="hidden" name="kanaName2" th:value="${form.kanaName2}"/>
                             <input type="hidden" name="alphabetName" th:value="${form.alphabetName}"/>
+                            <input type="hidden" name="alphabetName2" th:value="${form.alphabetName2}"/>
                             <input type="hidden" name="gender" th:value="${form.gender}"/>
                             <input type="hidden" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
                             <input type="hidden" name="zipCode" th:value="${form.zipCode}"/>
