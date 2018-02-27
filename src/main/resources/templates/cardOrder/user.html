@@ -55,11 +55,11 @@
                             <table>
                                 <tr>
                                     <td><div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
-                                    <label>お名前（ローマ字　Last name）<font color="#DF013A">(必須)</font></label>
+                                    <label>お名前（ローマ字 Last name）<font color="#DF013A">(必須)</font></label>
                                     <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
                                     </div><td>
                                     <td><div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
-                                    <label>お名前（ローマ字　First name）<font color="#DF013A">(必須)</font></label>
+                                    <label>お名前（ローマ字 First name）<font color="#DF013A">(必須)</font></label>
                                     <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
                                     </div><td>
                                 <tr>
@@ -70,14 +70,19 @@
                                 <input type="radio" name="gender" value="male" th:checked="${form.gender}=='male'"/>男性
                                 <input type="radio" name="gender" value="female" th:checked="${form.gender}=='female'"/>女性
                             </div>
-                            <div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
-                                <label>生年月日 <font color="#DF013A">(必須)</font></label>
-                                <input type="text" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
-                            </div>
-                            <div class="field" th:classappend="${form.hasErrors('age')} ? 'error'">
-                                <label>年齢 <font color="#DF013A">(必須)</font></label>
-                                <input type="text" name="age" th:value="${form.age}"/>
-                            </div>
+
+                            <table>
+                                <tr>
+                                    <td><div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
+                                        <label>生年月日 <font color="#DF013A">(必須)</font></label>
+                                        <input type="text" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
+                                    </div> <td>
+                                    <td><div class="field" th:classappend="${form.hasErrors('age')} ? 'error'">
+                                        <label>年齢 <font color="#DF013A">(必須)</font></label>
+                                        <input type="text" name="age" th:value="${form.age}"/>
+                                    </div> <td>
+                                <tr>
+                            <table>
                             <div class="field" th:classappend="${form.hasErrors('zipCode')} ? 'error'">
                                 <label>郵便番号 <font color="#DF013A">(必須)</font>　<font size="1" color="#424242">ハイフン要</font></label>
                                 <input type="text" class="zipcode" name="zipCode" th:value="${form.zipCode}"/>
