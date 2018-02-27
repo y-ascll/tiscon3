@@ -7,6 +7,8 @@ import org.seasar.doma.GenerationType;
 import org.seasar.doma.Id;
 import org.seasar.doma.Table;
 
+import java.math.BigInteger;
+
 /**
  *
  */
@@ -35,6 +37,10 @@ public class CardOrder {
     /**  */
     @Column(name = "DATE_OF_BIRTH")
     String dateOfBirth;
+
+    /**  */
+    @Column(name = "age")
+    String age;
 
     /**  */
     @Column(name = "GENDER")
@@ -78,7 +84,7 @@ public class CardOrder {
 
     /**  */
     @Column(name = "INCOME")
-    Integer income;
+    BigInteger income;
 
     /**  */
     @Column(name = "EMPLOYER_NAME")
@@ -395,7 +401,7 @@ public class CardOrder {
      *
      * @return the income
      */
-    public Integer getIncome() {
+    public BigInteger getIncome() {
         return income;
     }
 
@@ -404,7 +410,7 @@ public class CardOrder {
      *
      * @param income the income
      */
-    public void setIncome(Integer income) {
+    public void setIncome(BigInteger income) {
         this.income = income;
     }
 
