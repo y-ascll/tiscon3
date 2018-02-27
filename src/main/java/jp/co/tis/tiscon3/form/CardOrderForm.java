@@ -29,6 +29,10 @@ public class CardOrderForm extends FormBase {
     private String dateOfBirth;
 
     @NotBlank
+    @Size(max = 3)
+    private String age;
+
+    @NotBlank
     @Size(max = 6)
     private String gender;
 
@@ -73,7 +77,7 @@ public class CardOrderForm extends FormBase {
     private String job;
 
     @NotBlank
-    @Size(max = 6)
+    @Size(max = 11)
     @Pattern(regexp = "[0-9]*")
     private String income;
 
