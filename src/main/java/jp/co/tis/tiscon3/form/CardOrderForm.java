@@ -74,24 +74,24 @@ public class CardOrderForm extends FormBase {
     @Email
     private String emailAddress;
 
-    @NotBlank
+    @NotBlank(message = "")
     @Size(max = 20)
     private String spouse;
 
-    @NotBlank
+    @NotBlank(message = "")
     @Size(max = 20)
     private String houseClassification;
 
-    @NotBlank
+    @NotBlank(message = "")
     @Size(max = 6)
     @Pattern(regexp = "[0-9]*")
     private String debt;
 
-    @NotBlank
+    @NotBlank(message = "")
     @Size(max = 120)
     private String job;
 
-    @NotBlank
+    @NotBlank(message = "")
     @Size(max = 11)
     @Pattern(regexp = "[0-9]*")
     private String income;
@@ -110,15 +110,15 @@ public class CardOrderForm extends FormBase {
     @Pattern(regexp = "^(0[0-9]{1,3}-[0-9]{2,4}-[0-9]{4})?$")
     private String employerPhoneNumber;
 
-    @Size(max = 255)
+    @Size(max = 255, message = "")
     private String industryType;
 
-    @Size(max = 6)
+    @Size(max = 6, message = "")
     @Pattern(regexp = "[0-9]*")
     private String capital;
 
     @Size(max = 255)
-    @Pattern(regexp = "[0-9]*")
+    @Pattern(regexp = "[0-9]*", message = "")
     private String companySize;
 
     @Size(max = 255)
